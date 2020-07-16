@@ -12,4 +12,4 @@ Daniel Altman
 * Galeria (producto)
 * Contacto
 ## Wirefreames
-Para ingresas a los wireframes [(Click aqui)]()
+Para ingresas a los wireframes [(Click aqui)](https://github.com/darango401/Plataformas-de-Programacion/tree/master/Wireframes)
