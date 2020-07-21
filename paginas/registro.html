@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Registro</title>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+  <form class="pure-form-aligned">
+      <div id="principal">
+        <div id="nombre">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" pattern="[a-zA-z]{3,20}" required>
+          <label>Solo debe tener letras</label>
+        </div>
+        <br>
+        <div id="apellido">
+          <label for="apellido">Apellido:</label>
+          <input type="text" name="apellido" id="apellido" pattern="[a-zA-z]{2,35}" required>
+          <label>Solo debe tener letras</label>
+        </div>
+        <br>
+        <div id="usuario">
+          <label for="usuario">Usuario:</label>
+          <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9-]{5,12}" required>
+          <label> Debe tener letras, numeros o ambos</label>
+        </div>
+        <br>
+        <div id="clave">
+          <label for="clave">Clave:</label>
+          <input type="text" name="clave" id="clave" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <label>Debe contener al menos un numero, una mayuscula y una minuscula</label>
+        </div>
+        <br>
+        <div id="depto">
+          <label for="depto">Departamento</label>
+          <select id="select-depto" name="depto" required>
+            <option value="">Seleccione...</option>
+            <option value="Antioquia">Antioquia</option>
+            <option value="Cundinamarca">Cundinamarca</option>
+            <option value="Santander">Santander</option>
+            <option value="Valle del cauca">Valle del cauca</option>
+          </select>
+        </div><br><br>
+      </div>
+      <input type="button" onclick="location.href='../index.html';" value="Volver" />
+      <input type="submit"  value="Registrarme" />
+  </form>   
+
+  
+
+</body>
+
+</html>
