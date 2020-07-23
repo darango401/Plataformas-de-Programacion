@@ -4,53 +4,47 @@
 <head>
   <meta charset="utf-8">
   <title>Registro</title>
-  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-  <form class="pure-form-aligned">
-      <div id="principal">
-        <div id="nombre">
-          <label for="nombre">Nombre:</label>
-          <input type="text" name="nombre" id="nombre" pattern="[a-zA-z]{3,20}" required>
-          <label>Solo debe tener letras</label>
-        </div>
-        <br>
-        <div id="apellido">
-          <label for="apellido">Apellido:</label>
-          <input type="text" name="apellido" id="apellido" pattern="[a-zA-z]{2,35}" required>
-          <label>Solo debe tener letras</label>
-        </div>
-        <br>
-        <div id="usuario">
-          <label for="usuario">Usuario:</label>
-          <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9-]{5,12}" required>
-          <label> Debe tener letras, numeros o ambos</label>
-        </div>
-        <br>
-        <div id="clave">
-          <label for="clave">Clave:</label>
-          <input type="text" name="clave" id="clave" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-          <label>Debe contener al menos un numero, una mayuscula y una minuscula</label>
-        </div>
-        <br>
-        <div id="depto">
-          <label for="depto">Departamento</label>
-          <select id="select-depto" name="depto" required>
-            <option value="">Seleccione...</option>
-            <option value="Antioquia">Antioquia</option>
-            <option value="Cundinamarca">Cundinamarca</option>
-            <option value="Santander">Santander</option>
-            <option value="Valle del cauca">Valle del cauca</option>
-          </select>
-        </div><br><br>
-      </div>
-      <input type="button" onclick="location.href='../index.html';" value="Volver" />
-      <input type="submit"  value="Registrarme" />
+  <form>
+    <div id="nombre">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" pattern="[a-zA-z]{3,20}" required="true">
+      <label>Solo debe tener letras</label>
+    </div>
+    <br>
+    <div id="apellido">
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" id="apellido" pattern="[a-zA-z]{2,35}" required>
+      <label>Solo debe tener letras</label>
+    </div>
+    <br>
+    <div id="usuario">
+      <label for="usuario">Usuario:</label>
+      <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9-]{5,12}" required>
+      <label> Debe tener letras, numeros o ambos</label>
+    </div>
+    <br>
+    <div id="clave">
+      <label for="clave">Clave:</label>
+      <input type="text" name="clave" id="clave" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+      <label>Debe contener al menos un numero, una mayuscula y una minuscula</label>
+    </div>
+    <br>
+    <div id="depto">
+      <label for="depto">Departamento</label>
+      <select id="select-depto" name="depto" required>
+        <option class="controls" value="1">AMAZONAS</option><option class="fbra_selectOption" value="2">ANTIOQUIA</option><option class="fbra_selectOption" value="3">ARAUCA</option><option class="fbra_selectOption" value="4">ATLANTICO</option><option class="fbra_selectOption" value="5">BOLIVAR</option><option class="fbra_selectOption" value="6">BOYACA</option><option class="fbra_selectOption" value="7">CALDAS</option><option class="fbra_selectOption" value="8">CAQUETA</option><option class="fbra_selectOption" value="9">CASANARE</option><option class="fbra_selectOption" value="10">CAUCA</option><option class="fbra_selectOption" value="11">CESAR</option><option class="fbra_selectOption" value="12">CHOCO</option><option class="fbra_selectOption" value="13">CORDOBA</option><option class="fbra_selectOption" value="14">CUNDINAMARCA</option><option class="fbra_selectOption" value="16">GUAVIARE</option><option class="fbra_selectOption" value="17">HUILA</option><option class="fbra_selectOption" value="18">LA GUAJIRA</option><option class="fbra_selectOption" value="19">MAGDALENA</option><option class="fbra_selectOption" value="20">META</option><option class="fbra_selectOption" value="21">NARIÑO</option><option class="fbra_selectOption" value="22">NORTE DE SANTANDER</option><option class="fbra_selectOption" value="23">PUTUMAYO</option><option class="fbra_selectOption" value="24">QUINDIO</option><option class="fbra_selectOption" value="25">RISARALDA</option><option class="fbra_selectOption" value="27">SANTANDER</option><option class="fbra_selectOption" value="28">SUCRE</option><option class="fbra_selectOption" value="29">TOLIMA</option><option class="fbra_selectOption" value="30">VALLE DEL CAUCA</option><option class="fbra_selectOption" value="31">VAUPES</option><option class="fbra_selectOption" value="32">VICHADA</option>
+      </select>
+    </div><br><br>
   </form>   
 
-  
 
+
+  <input type="button" onclick="location.href='login.html';" value="Login" />
+  <input type="submit"  value="Registrarme" /> 
 </body>
 
 </html>
