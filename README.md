@@ -7,7 +7,7 @@ Daniel Altman
 
 ## Secciones
 * Login
-* regitro
+* Registro
 * Contenido
 * Galeria (producto)
 * Contacto
