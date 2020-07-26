@@ -3,48 +3,105 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
+
 </head>
 
 <body>
-  <form>
-    <div id="nombre">
-      <label for="nombre">Nombre:</label>
-      <input type="text" name="nombre" id="nombre" pattern="[a-zA-z]{3,20}" required="true">
-      <label>Solo debe tener letras</label>
+
+  <form class="formulario" id="formulario" >     
+   <div class="formulario_grupo" id="grupo_nombre">
+    <label for="nombre" class="formulario_label">Nombre</label>
+    <div class="formulario_grupo-input">
+      <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Nombre..." required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
     </div>
-    <br>
-    <div id="apellido">
-      <label for="apellido">Apellido:</label>
-      <input type="text" name="apellido" id="apellido" pattern="[a-zA-z]{2,35}" required>
-      <label>Solo debe tener letras</label>
+    <p class="formulario_input-error">Debe tener entre 3-16 letras solamente.</p>
+  </div>
+  <div class="formulario_grupo" id="grupo_apellido">
+    <label for="apellido" class="formulario_label">Apellido</label>
+    <div class="formulario_grupo-input">
+      <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Apellido..." required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
     </div>
-    <br>
-    <div id="usuario">
-      <label for="usuario">Usuario:</label>
-      <input type="text" name="usuario" id="usuario" pattern="[a-zA-Z0-9-]{5,12}" required>
-      <label> Debe tener letras, numeros o ambos</label>
+    <p class="formulario_input-error">Debe tener entre 2-35 letras solamente.</p>
+  </div>
+  <div class="formulario_grupo" id="grupo_usuario">
+    <label for="usuario" class="formulario_label">Usuario</label>
+    <div class="formulario_grupo-input">
+      <input type="text" class="formulario_input" name="usuario" id="usuario" placeholder="Usuario..." required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
     </div>
-    <br>
-    <div id="clave">
-      <label for="clave">Clave:</label>
-      <input type="text" name="clave" id="clave" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-      <label>Debe contener al menos un numero, una mayuscula y una minuscula</label>
+    <p class="formulario_input-error">Solo debe tener entre 4-16 letras, numeros o ambos.</p>
+  </div>
+  <div class="formulario_grupo" id="grupo_correo">
+    <label for="correo" class="formulario_label">Correo</label>
+    <div class="formulario_grupo-input">
+      <input type="email" class="formulario_input" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
     </div>
-    <br>
-    <div id="depto">
-      <label for="depto">Departamento</label>
-      <select id="select-depto" name="depto" required>
-        <option class="controls" value="1">AMAZONAS</option><option class="fbra_selectOption" value="2">ANTIOQUIA</option><option class="fbra_selectOption" value="3">ARAUCA</option><option class="fbra_selectOption" value="4">ATLANTICO</option><option class="fbra_selectOption" value="5">BOLIVAR</option><option class="fbra_selectOption" value="6">BOYACA</option><option class="fbra_selectOption" value="7">CALDAS</option><option class="fbra_selectOption" value="8">CAQUETA</option><option class="fbra_selectOption" value="9">CASANARE</option><option class="fbra_selectOption" value="10">CAUCA</option><option class="fbra_selectOption" value="11">CESAR</option><option class="fbra_selectOption" value="12">CHOCO</option><option class="fbra_selectOption" value="13">CORDOBA</option><option class="fbra_selectOption" value="14">CUNDINAMARCA</option><option class="fbra_selectOption" value="16">GUAVIARE</option><option class="fbra_selectOption" value="17">HUILA</option><option class="fbra_selectOption" value="18">LA GUAJIRA</option><option class="fbra_selectOption" value="19">MAGDALENA</option><option class="fbra_selectOption" value="20">META</option><option class="fbra_selectOption" value="21">NARIÑO</option><option class="fbra_selectOption" value="22">NORTE DE SANTANDER</option><option class="fbra_selectOption" value="23">PUTUMAYO</option><option class="fbra_selectOption" value="24">QUINDIO</option><option class="fbra_selectOption" value="25">RISARALDA</option><option class="fbra_selectOption" value="27">SANTANDER</option><option class="fbra_selectOption" value="28">SUCRE</option><option class="fbra_selectOption" value="29">TOLIMA</option><option class="fbra_selectOption" value="30">VALLE DEL CAUCA</option><option class="fbra_selectOption" value="31">VAUPES</option><option class="fbra_selectOption" value="32">VICHADA</option>
+    <p class="formulario_input-error">Debe tener formato ejemplo@ejemplo.com</p>
+  </div>
+  <div class="formulario_grupo" id="grupo_departamento">
+    <label for="departamento" class="formulario_label">Departamento</label>
+    <div class="formulario_grupo-input">
+      <select class="formulario_select" name="departamento" id="departamento">
+        <option value="">Seleccione un departamento</option>
+        <option value="1">Antioquia</option>
       </select>
-    </div><br><br>
-  </form>   
+    </div>
+    <p class="formulario_input-error">Debe Seleccionar un departamento</p>
+  </div>
+  <div class="formulario_grupo" id="grupo_municipio">
+    <label for="municipio" class="formulario_label">Municipio</label>
+    <div class="formulario_grupo-input">
+      <select class="formulario_select" name="municipio" id="municipio">
+        <option value="">Seleccione un municipio</option>
+        <option value="1">Antioquia</option>
+      </select>
+    </div>
+    <p class="formulario_input-error">Debe Seleccionar un municipio</p>
+  </div> 
+  <div class="formulario_grupo" id="grupo_contrasena">
+    <label for="contrasena" class="formulario_label">Contraseña</label>
+    <div class="formulario_grupo-input">
+      <input type="password" class="formulario_input" name="contrasena" id="contrasena" placeholder="Contraseña..." required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
+    </div>
+    <p class="formulario_input-error">Debe tener 4-12 digitos.</p>
+  </div>   
+  <div class="formulario_grupo" id="grupo_contrasena2">
+    <label for="contrasena2" class="formulario_label"> Repetir contraseña</label>
+    <div class="formulario_grupo-input">
+      <input type="password" class="formulario_input" name="contrasena2" id="contrasena2" placeholder="Repetir contraseña..." required>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
+    </div>
+    <p class="formulario_input-error">Las contraseñas deben ser iguales.</p>
+    <div class="formulario_mensaje" id="formulario_mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+      </div>  
+
+    <div class="formulario_grupo formulario_grupo-btn-enviar">
+      <button type="submit" class="formulario_btn">Registrarme</button>
+      <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Te has registrado exitosamente</p>
+    </div>
+    <div class="formulario_grupo formulario_grupo-btn-login">
+      <button type="button" onclick="location='login.html'" class="formulario_btn">Iniciar sesion</button>   
+    </div>
+    
+  </form>
+
+</div><br><br>
 
 
 
-  <input type="button" onclick="location.href='login.html';" value="Login" />
-  <input type="submit"  value="Registrarme" /> 
+<script src="../js/main.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
+
