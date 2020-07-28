@@ -6,19 +6,19 @@
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  <form method="post">
+  <form method="post" class="login">
     <h2>Login</h2>    
     <div>
-      <label for="usuario">Usuario</label>
-      <input type="text" name="usuario" id="usuario">
+      <label for="usuario" class="formulario__label">Usuario</label>
+      <input type="text" class="formulario__input" name="usuario" id="usuario">
     </div><br>
     <div>
-      <label for="clave">Clave</label>
-      <input type="password" name="clave" id="clave">
+      <label for="clave" class="formulario__label">Clave</label>
+      <input type="password" class="formulario__input" name="clave" id="clave">
     </div>
     <div><br><br>
-      <input type="button" onclick="location.href='registro.html';" value="Registrarme" />
-      <input type="submit"  value="Entrar" />
+     <a href="registro.html"><button type="button" class="formulario__btn">Registrarse</button></a>
+      <input type="submit" class="formulario__btn" value="Entrar" />
     </div>
   </form>
 </body>
