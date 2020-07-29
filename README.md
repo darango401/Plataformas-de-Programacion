@@ -1,6 +1,6 @@
 # Micrositio
 
-Descripcion ..
+En este proyecto se elaborará un micro sitio que necesite de registro y login para poder acceder a su contenido
 
 ## Autor
 Daniel Altman
