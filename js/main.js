@@ -99,7 +99,7 @@ formulario.addEventListener('submit', (e) => {
             document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
         }, 5000);
 
-        
+
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
@@ -118,3 +118,11 @@ function cargar() {
     }
 }
 cargar();
+function validar() {
+        if (document.formulario.departamento.value == "0" ) {
+                document.formulario.vivienda.focus()
+                alert("Elija una opción");
+                return false;
+        };
+}
+validar();
