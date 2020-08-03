@@ -1,6 +1,7 @@
 # Micrositio
 
-En este proyecto se elaborará un micro sitio que necesite de registro y login para poder acceder a su contenido
+En este proyecto se elaborará un micrositio que necesite de registro y login para poder acceder a su contenido. 
+Su contenido se basará en informacion  de planetas y objetos en el espacio.
 
 ## Autor
 Daniel Altman
