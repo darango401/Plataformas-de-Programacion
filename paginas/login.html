@@ -6,20 +6,21 @@
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-  <form method="post" class="login">
+  <form method="post" class="login" id="login">
     <h2>Login</h2>    
     <div>
       <label for="usuario" class="formulario__label">Usuario</label>
-      <input type="text" class="formulario__input" name="usuario" id="usuario">
+      <input required type="text" class="formulario__input" name="usuario" id="usuario">
     </div><br>
     <div>
-      <label for="clave" class="formulario__label">Clave</label>
-      <input type="password" class="formulario__input" name="clave" id="clave">
+      <label for="contrasena" class="formulario__label">Clave</label>
+      <input required type="password" class="formulario__input" name="contrasena" id="contrasena">
     </div>
     <div><br><br>
      <a href="registro.html"><button type="button" class="formulario__btn">Registrarse</button></a>
-      <input type="submit" class="formulario__btn" value="Entrar" />
-    </div>
-  </form>
+     <input type="submit" class="formulario__btn" onclick="procesarDatos()" value="Entrar" />
+   </div>
+ </form>
+ <script src="../js/login.js"></script>
 </body>
 </html>

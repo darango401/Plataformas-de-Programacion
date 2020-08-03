@@ -86,21 +86,17 @@ inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
 });
-
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const terminos = document.getElementById('terminos');
-    if(campos.usuario && campos.nombre && campos.contrasena && campos.correo && campos.apellido  ){
-        formulario.reset();
-
+    if(campos.usuario && campos.nombre && campos.contrasena && campos.correo && campos.apellido ){
+        procesarDatos();
+        formulario.reset();        
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
         setTimeout(() => {
             document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
         }, 5000);
-
-
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
@@ -112,36 +108,36 @@ function cambio(){
     var ciudades=
     [["Leticia"],
     ["Medellín","Envigado","Sabaneta","Bello"],
-     ["Arauca","Arauquita","Saravena"],
-     ["Barranquilla"],
-     ["Cartagena"],
+    ["Arauca","Arauquita","Saravena"],
+    ["Barranquilla"],
+    ["Cartagena"],
     ["Tunja"],
-     ["Manizales"],
-     ["Florencia"],
-     ["Yopal"],
-     ["Popayan"],
-     ["Valledupar"],
-     ["Quibdo"],
+    ["Manizales"],
+    ["Florencia"],
+    ["Yopal"],
+    ["Popayan"],
+    ["Valledupar"],
+    ["Quibdo"],
     ["Monteria"],
-     ["Bogota","Bituima","Chipaque","Ubaque","Cota"],
+    ["Bogota","Bituima","Chipaque","Ubaque","Cota"],
     ["Inirida"],
-   ["San Jose del Guaviare"],
-   ["Neiva"],
-   ["Rioacha"],
-   ["Santa Marta","Algarrobo","Concordia"],
-   ["Villavicencio"],
-   ["Pasto"],
-   ["Cucuta"],
-   ["Mocoa"],
-   ["Armenia"],
-   ["Pereira","Dosquebradas","La Virginia","Santa Rosa De Cabal"],
-   ["San Andres"],
-   ["Bucaramanga"],
-   ["Sincelejo"],
-   ["Ibague"],
-   ["Cali","Buga","Palmira","Cartago"],
-   ["Mitu"],
-   ["Puerto Carreño"]];
+    ["San Jose del Guaviare"],
+    ["Neiva"],
+    ["Rioacha"],
+    ["Santa Marta","Algarrobo","Concordia"],
+    ["Villavicencio"],
+    ["Pasto"],
+    ["Cucuta"],
+    ["Mocoa"],
+    ["Armenia"],
+    ["Pereira","Dosquebradas","La Virginia","Santa Rosa De Cabal"],
+    ["San Andres"],
+    ["Bucaramanga"],
+    ["Sincelejo"],
+    ["Ibague"],
+    ["Cali","Buga","Palmira","Cartago"],
+    ["Mitu"],
+    ["Puerto Carreño"]];
     var arreglo;
     var select_departamentos = document.getElementById("departamento");
     var select_municipio = document.getElementById("municipio");
@@ -153,5 +149,19 @@ function cambio(){
         select_municipio.appendChild(option); 
     } 
 }
-
-
+function procesarDatos(){    
+    fetch('../procesar.php',{
+     method: 'post',
+     body:new FormData(formulario)
+ }).then(function(response) {
+     return response.json(); 
+ }).then(function(json) {
+     guardarLocal(json);
+ }).catch(function(err) {
+  // Error :(
+});
+}
+function guardarLocal(json){
+    localStorage.setItem("usuario",JSON.stringify(json));
+    location.href = "login.html";
+}
